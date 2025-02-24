@@ -1,42 +1,42 @@
-import mysql.connector
-from dotenv import load_dotenv
 import os
+from dotenv import load_dotenv
+import mysql.connector
 
-# Cargar variables de entorno desde .env
-load_dotenv('.\Workshop-1\source\credentials.env')
+# Cargar variables de entorno desde el archivo .env
+load_dotenv()
 
-# Mensaje de depuración
+# Obtener las variables de entorno
+db_user = os.getenv('DB_USER')
+db_password = os.getenv('DB_PASSWORD')
+db_host = os.getenv('DB_HOST')
+db_name = os.getenv('DB_NAME')
+db_port = os.getenv('DB_PORT')
+
+# Mostrar las variables de entorno cargadas
 print("Variables de entorno cargadas:")
-print(f"Usuario: {os.getenv('DB_USER')}")
-print(f"Contraseña: {os.getenv('DB_PASSWORD')}")
-print(f"Host: {os.getenv('DB_HOST')}")
-print(f"Base de datos: {os.getenv('DB_NAME')}")
-print(f"Puerto: {os.getenv('DB_PORT')}")
+print(f"Usuario: {db_user}")
+print(f"Contraseña: {db_password}")
+print(f"Host: {db_host}")
+print(f"Base de datos: {db_name}")
+print(f"Puerto: {db_port}")
 
-def get_db_connection():
-    """
-    Establece y retorna una conexión a la base de datos MySQL.
-    """
-    config = {
-        "user": "root",
-        "password": "root",
-        "host": "127.0.0.1",
-        "database": "candidates_db",
-        "port": 3305,
-        "raise_on_warnings": True
-    }
-    try:
-        conexion = mysql.connector.connect(**config)
-        if conexion.is_connected():
-            print("Conexión a la base de datos exitosa.")
-        return conexion
-    except mysql.connector.Error as err:
-        print(f"Error al conectar a la base de datos: {err}")
-        raise
+# Conectar a la base de datos
+try:
+    conexion = mysql.connector.connect(
+        user=db_user,
+        password=db_password,
+        host=db_host,
+        database=db_name,
+        port=db_port
+    )
+    
+    if conexion.is_connected():
+        print("Conexión a la base de datos exitosa.")
+        
+except mysql.connector.Error as err:
+    print(f"Error: {err}")
 
-if __name__ == "__main__":
-    # Prueba la conexión
-    conexion = get_db_connection()
-    if conexion:
+finally:
+    if 'conexion' in locals() and conexion.is_connected():
         conexion.close()
         print("Conexión cerrada.")
