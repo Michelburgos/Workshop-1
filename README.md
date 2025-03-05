@@ -14,7 +14,7 @@ Las tecnologías utilizadas en este proyecto incluyen:
 - **MySQL**: Como base de datos relacional para almacenar y consultar los datos.  
 - **Power BI**: Para la creación de visualizaciones interactivas y dashboards.  
 
----
+
 
 ## Tabla de Contenidos  
 1. [Prerrequisitos](#prerrequisitos)  
@@ -24,7 +24,6 @@ Las tecnologías utilizadas en este proyecto incluyen:
 5. [Visualizaciones en Power BI](#visualizaciones-en-power-bi)  
 6. [Documentación](#documentación)  
 
----
 
 ## Prerrequisitos  
 Antes de comenzar, asegúrate de cumplir con los siguientes requisitos:  
@@ -76,4 +75,6 @@ Despues de tener el archivo `.env` cambia la ruta en el archivo connection_mysql
 Ejecuta el archivo connection_mysql.py para conectarse a la base de datos
 ```bash
 python connection_mysql.py
+
+## Uso
 
