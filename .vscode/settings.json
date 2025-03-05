@@ -1,7 +1,0 @@
-{
-    "python.analysis.extraPaths": [
-        "./source"
-    ],
-    "notebook.output.minimalErrorRendering": false,
-    "notebook.output.scrolling": true
-}
