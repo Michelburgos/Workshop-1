@@ -1,5 +1,5 @@
 credentials.json 
-#Todos los archivos terminados en .png
+#Todos los archivos terminados en .env
 *.env
 #Carpetas
 venv/

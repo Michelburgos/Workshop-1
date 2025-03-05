@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 from sqlalchemy import create_engine, text
 
-dotenv_path = "C:/Users/Michel Burgos/OneDrive/Documentos/GitHub/Workshop-1/credential.env"
+dotenv_path = "C:/ruta del archivo .env"
 load_dotenv(dotenv_path)
 
 db_user = os.getenv('DB_USER')
