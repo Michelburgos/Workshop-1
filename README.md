@@ -1,5 +1,3 @@
----
-
 # Workshop 1  
 
 ## Visión General  
@@ -15,8 +13,6 @@ Las tecnologías utilizadas en este proyecto incluyen:
 - **Jupyter Notebook**: Para análisis interactivo de datos.  
 - **MySQL**: Base de datos relacional para almacenamiento y consultas.  
 - **Power BI**: Para la creación de dashboards interactivos.  
-
----
 
 ## Tabla de Contenidos  
 1. [Prerrequisitos](#prerrequisitos)  
