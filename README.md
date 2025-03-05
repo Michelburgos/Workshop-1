@@ -1,6 +1,6 @@
 ---
 
-# Workshop #1  
+# Workshop 1  
 
 ## Visión General  
 Este proyecto aborda un reto de ingeniería de datos que implica el análisis de un conjunto de datos con 50,000 registros de candidatos en procesos de selección. Su principal objetivo es migrar los datos a una base de datos relacional, aplicar lógica de negocio para identificar candidatos "contratados" (HIRED) y generar visualizaciones clave con métricas relevantes.  
