@@ -78,7 +78,7 @@ Antes de comenzar, asegúrate de cumplir con los siguientes requisitos:
 
 2. Asegúrate de modificar la ruta del archivo `.env` en `connection_mysql.py`:  
    ```python  
-   dotenv_path = "C:/ruta/del/archivo/.env"  
+   dotenv_path = "C:/ruta del archivo .env"  
    ```  
 
 3. Ejecuta el siguiente comando para comprobar la conexión a la base de datos:  
