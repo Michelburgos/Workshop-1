@@ -131,7 +131,7 @@ Una vez configurado el DSN en ODBC, Power BI puede conectarse a la base de datos
 1. Abrir **Power BI**.
 2. Hacer clic en **Obtener datos**.
 3. Seleccionar la opción **ODBC** en la lista de conectores.
-4. En la ventana emergente, elegir el DSN configurado previamente (`MySQL_PowerBI`).
+4. En la ventana emergente, elegir el DSN configurado previamente.
 5. Ingresar credenciales si es necesario y hacer clic en **Conectar**.
 6. Aparecerá una lista de bases de datos y tablas disponibles en MySQL.
 7. Seleccionar la base de datos y las tablas que se desean importar.
