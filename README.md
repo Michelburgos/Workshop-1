@@ -125,7 +125,7 @@ Después de instalar el conector, se debe configurar una fuente de datos ODBC en
 5. Hacer clic en **Test** para verificar la conexión.
 6. Si todo está correcto, guardar la configuración.
 
-### 3. Conectar Power BI a MySQL
+### Conectar Power BI a MySQL
 Una vez configurado el DSN en ODBC, Power BI puede conectarse a la base de datos.
 
 1. Abrir **Power BI**.
