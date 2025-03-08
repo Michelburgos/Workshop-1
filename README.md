@@ -103,7 +103,6 @@ Para ejecutar correctamente el análisis, sigue este orden en los notebooks:
 ## Visualizaciones en Power BI  
 ### Conectar Power BI con MySQL  
 #### Instalación del conector  
-## 1. Instalación de MySQL Connector/ODBC
 Power BI no tiene un conector nativo para MySQL, por lo que es necesario instalar **MySQL Connector/ODBC**.
 
 ### Pasos:
@@ -112,9 +111,7 @@ Power BI no tiene un conector nativo para MySQL, por lo que es necesario instala
 2. Instalar el conector en el sistema.
 3. Durante la instalación, asegurarse de seleccionar la opción **Unicode Driver** para mejor compatibilidad.
 
----
-
-## 2. Configuración de una Fuente de Datos ODBC (DSN)
+### Configuración de una Fuente de Datos ODBC (DSN)
 Después de instalar el conector, se debe configurar una fuente de datos ODBC en Windows.
 
 ### Pasos:
@@ -130,9 +127,7 @@ Después de instalar el conector, se debe configurar una fuente de datos ODBC en
 5. Hacer clic en **Test** para verificar la conexión.
 6. Si todo está correcto, guardar la configuración.
 
----
-
-## 3. Conectar Power BI a MySQL
+### 3. Conectar Power BI a MySQL
 Una vez configurado el DSN en ODBC, Power BI puede conectarse a la base de datos.
 
 ### Pasos:
