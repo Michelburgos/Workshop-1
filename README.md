@@ -103,23 +103,48 @@ Para ejecutar correctamente el análisis, sigue este orden en los notebooks:
 ## Visualizaciones en Power BI  
 ### Conectar Power BI con MySQL  
 #### Instalación del conector  
-Como utilizamos MySQL, es necesario instalar **MySQL Connector/NET**.  
+## 1. Instalación de MySQL Connector/ODBC
+Power BI no tiene un conector nativo para MySQL, por lo que es necesario instalar **MySQL Connector/ODBC**.
 
-1. Descarga **MySQL Connector/NET** desde la página oficial:  
-   🔗 [MySQL Connector/NET](https://dev.mysql.com/downloads/connector/net/)  
-2. Instala la versión compatible con tu sistema operativo (32 o 64 bits).  
+### Pasos:
+1. Descargar el conector desde la página oficial de MySQL:
+   - [Descargar MySQL Connector/ODBC](https://dev.mysql.com/downloads/connector/odbc/)
+2. Instalar el conector en el sistema.
+3. Durante la instalación, asegurarse de seleccionar la opción **Unicode Driver** para mejor compatibilidad.
 
-#### Configuración de la conexión en Power BI  
-1. Abre **Power BI Desktop**.  
-2. Ve a **Obtener datos** > **Base de datos** > **MySQL**.  
-3. En el campo **Servidor**, ingresa:  
-   - `localhost` si MySQL está en tu máquina.  
-   - `IP_DEL_SERVIDOR` o `NOMBRE_DEL_SERVIDOR` si es remoto.  
-   - Si es necesario, especifica el puerto en el formato: `servidor:puerto` (Ej: `192.168.1.10:3306`).  
-4. Selecciona el método de autenticación:  
-   - **Base de datos** → Ingresa tu usuario y contraseña de MySQL.  
-   - **Windows** → Si MySQL permite autenticación con Windows (menos común).  
-5. Haz clic en **Conectar** y selecciona la base de datos y las tablas necesarias.  
+---
+
+## 2. Configuración de una Fuente de Datos ODBC (DSN)
+Después de instalar el conector, se debe configurar una fuente de datos ODBC en Windows.
+
+### Pasos:
+1. Abrir el **Administrador de Orígenes de Datos ODBC** en Windows (buscar "ODBC" en el menú de inicio).
+2. Seleccionar la pestaña **DSN del sistema** y hacer clic en **Agregar**.
+3. Elegir **MySQL ODBC Unicode Driver** y hacer clic en **Finalizar**.
+4. En la ventana de configuración, ingresar los datos de conexión:
+   - **Data Source Name (DSN)**: Nombre para identificar la conexión (ejemplo: `MySQL_PowerBI`).
+   - **Server**: IP o nombre del servidor donde está MySQL (ejemplo: `localhost` o `192.168.1.100`).
+   - **User**: Usuario de MySQL (ejemplo: `root`).
+   - **Password**: Contraseña del usuario de MySQL.
+   - **Database**: Nombre de la base de datos a la que se conectará Power BI.
+5. Hacer clic en **Test** para verificar la conexión.
+6. Si todo está correcto, guardar la configuración.
+
+---
+
+## 3. Conectar Power BI a MySQL
+Una vez configurado el DSN en ODBC, Power BI puede conectarse a la base de datos.
+
+### Pasos:
+1. Abrir **Power BI**.
+2. Hacer clic en **Obtener datos**.
+3. Seleccionar la opción **ODBC** en la lista de conectores.
+4. En la ventana emergente, elegir el DSN configurado previamente (`MySQL_PowerBI`).
+5. Ingresar credenciales si es necesario y hacer clic en **Conectar**.
+6. Aparecerá una lista de bases de datos y tablas disponibles en MySQL.
+7. Seleccionar la base de datos y las tablas que se desean importar.
+8. Hacer clic en **Cargar** para traer los datos a Power BI.
+
 
 #### Creación de Visualizaciones  
 Una vez conectada la base de datos en Power BI, puedes comenzar a construir visualizaciones con los datos extraídos y transformados. Algunas métricas sugeridas incluyen:  
